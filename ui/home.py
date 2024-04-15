@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDoubleSpinBo
     QFrame, QHBoxLayout, QLabel, QLayout,
     QMainWindow, QProgressBar, QPushButton, QSizePolicy,
     QSlider, QSpacerItem, QSpinBox, QSplitter,
-    QVBoxLayout, QWidget)
+    QTextBrowser, QVBoxLayout, QWidget)
 import ui.resources_rc
 
 class Ui_MainWindow(object):
@@ -1081,17 +1081,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_15.addWidget(self.ToggleBotton_2)
 
-        self.frame = QFrame(self.IOU_QF)
-        self.frame.setObjectName(u"frame")
-        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
-        self.frame.setSizePolicy(sizePolicy)
-        self.frame.setMinimumSize(QSize(0, 20))
-        self.frame.setMaximumSize(QSize(16777215, 20))
-        self.horizontalLayout_10 = QHBoxLayout(self.frame)
+        self.frame_3 = QFrame(self.IOU_QF)
+        self.frame_3.setObjectName(u"frame_3")
+        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setMinimumSize(QSize(0, 20))
+        self.frame_3.setMaximumSize(QSize(16777215, 20))
+        self.horizontalLayout_10 = QHBoxLayout(self.frame_3)
         self.horizontalLayout_10.setSpacing(10)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
         self.horizontalLayout_10.setContentsMargins(8, 0, 10, 0)
-        self.iou_spinbox = QDoubleSpinBox(self.frame)
+        self.iou_spinbox = QDoubleSpinBox(self.frame_3)
         self.iou_spinbox.setObjectName(u"iou_spinbox")
         self.iou_spinbox.setCursor(QCursor(Qt.PointingHandCursor))
         self.iou_spinbox.setStyleSheet(u"QDoubleSpinBox {\n"
@@ -1127,7 +1127,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10.addWidget(self.iou_spinbox)
 
-        self.iou_slider = QSlider(self.frame)
+        self.iou_slider = QSlider(self.frame_3)
         self.iou_slider.setObjectName(u"iou_slider")
         self.iou_slider.setCursor(QCursor(Qt.PointingHandCursor))
         self.iou_slider.setStyleSheet(u"QSlider::groove:horizontal {\n"
@@ -1156,7 +1156,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_10.addWidget(self.iou_slider)
 
 
-        self.verticalLayout_15.addWidget(self.frame)
+        self.verticalLayout_15.addWidget(self.frame_3)
 
 
         self.verticalLayout_22.addWidget(self.IOU_QF)
@@ -1203,17 +1203,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_18.addWidget(self.ToggleBotton_3)
 
-        self.frame1 = QFrame(self.Conf_QF)
-        self.frame1.setObjectName(u"frame1")
-        sizePolicy.setHeightForWidth(self.frame1.sizePolicy().hasHeightForWidth())
-        self.frame1.setSizePolicy(sizePolicy)
-        self.frame1.setMinimumSize(QSize(0, 20))
-        self.frame1.setMaximumSize(QSize(16777215, 20))
-        self.horizontalLayout_11 = QHBoxLayout(self.frame1)
+        self.frame = QFrame(self.Conf_QF)
+        self.frame.setObjectName(u"frame")
+        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy)
+        self.frame.setMinimumSize(QSize(0, 20))
+        self.frame.setMaximumSize(QSize(16777215, 20))
+        self.horizontalLayout_11 = QHBoxLayout(self.frame)
         self.horizontalLayout_11.setSpacing(10)
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.horizontalLayout_11.setContentsMargins(8, 0, 10, 0)
-        self.conf_spinbox = QDoubleSpinBox(self.frame1)
+        self.conf_spinbox = QDoubleSpinBox(self.frame)
         self.conf_spinbox.setObjectName(u"conf_spinbox")
         self.conf_spinbox.setCursor(QCursor(Qt.PointingHandCursor))
         self.conf_spinbox.setStyleSheet(u"QDoubleSpinBox {\n"
@@ -1249,7 +1249,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_11.addWidget(self.conf_spinbox)
 
-        self.conf_slider = QSlider(self.frame1)
+        self.conf_slider = QSlider(self.frame)
         self.conf_slider.setObjectName(u"conf_slider")
         self.conf_slider.setCursor(QCursor(Qt.PointingHandCursor))
         self.conf_slider.setStyleSheet(u"QSlider::groove:horizontal {\n"
@@ -1278,7 +1278,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.addWidget(self.conf_slider)
 
 
-        self.verticalLayout_18.addWidget(self.frame1)
+        self.verticalLayout_18.addWidget(self.frame)
 
 
         self.verticalLayout_22.addWidget(self.Conf_QF)
@@ -1511,19 +1511,26 @@ class Ui_MainWindow(object):
 
         self.below = QFrame(self.ContentBox)
         self.below.setObjectName(u"below")
-        self.below.setMinimumSize(QSize(0, 30))
-        self.below.setMaximumSize(QSize(16777215, 30))
+        self.below.setMinimumSize(QSize(0, 330))
+        self.below.setMaximumSize(QSize(16777215, 330))
         self.below.setFrameShape(QFrame.StyledPanel)
         self.below.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_13 = QHBoxLayout(self.below)
-        self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.horizontalLayout_13.setContentsMargins(20, 2, 0, 4)
+        self.verticalLayout_23 = QVBoxLayout(self.below)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.verticalLayout_23.setContentsMargins(20, 2, 0, 4)
         self.status_bar = QLabel(self.below)
         self.status_bar.setObjectName(u"status_bar")
         self.status_bar.setStyleSheet(u"font: 700 11pt \"Segoe UI\";\n"
 "color: rgba(0, 0, 0, 140);")
 
-        self.horizontalLayout_13.addWidget(self.status_bar)
+        self.verticalLayout_23.addWidget(self.status_bar)
+
+        self.status_bar2 = QTextBrowser(self.below)
+        self.status_bar2.setObjectName(u"status_bar2")
+        self.status_bar2.setStyleSheet(u"font: 700 11pt \"Segoe UI\";\n"
+"color: rgba(0, 0, 0, 140);")
+
+        self.verticalLayout_23.addWidget(self.status_bar2)
 
         self.frame_size_grip = QFrame(self.below)
         self.frame_size_grip.setObjectName(u"frame_size_grip")
@@ -1532,7 +1539,7 @@ class Ui_MainWindow(object):
         self.frame_size_grip.setFrameShape(QFrame.StyledPanel)
         self.frame_size_grip.setFrameShadow(QFrame.Raised)
 
-        self.horizontalLayout_13.addWidget(self.frame_size_grip)
+        self.verticalLayout_23.addWidget(self.frame_size_grip)
 
 
         self.verticalLayout_6.addWidget(self.below)
@@ -1595,5 +1602,6 @@ class Ui_MainWindow(object):
         self.save_res_button.setText(QCoreApplication.translate("MainWindow", u"Save MP4/JPG", None))
         self.save_txt_button.setText(QCoreApplication.translate("MainWindow", u"Save Labels(.txt)", None))
         self.status_bar.setText(QCoreApplication.translate("MainWindow", u"Welcome!", None))
+        self.status_bar2.setText(QCoreApplication.translate("MainWindow", u"Welcome!", None))
     # retranslateUi
 

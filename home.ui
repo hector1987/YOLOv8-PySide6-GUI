@@ -3063,13 +3063,13 @@ padding-left: 10px;
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>30</height>
+              <height>330</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>30</height>
+              <height>330</height>
              </size>
             </property>
             <property name="frameShape">
@@ -3078,7 +3078,7 @@ padding-left: 10px;
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <layout class="QVBoxLayout" name="verticalLayout_23">
              <property name="leftMargin">
               <number>20</number>
              </property>
@@ -3093,6 +3093,17 @@ padding-left: 10px;
              </property>
              <item>
               <widget class="QLabel" name="status_bar">
+               <property name="styleSheet">
+                <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;
+color: rgba(0, 0, 0, 140);</string>
+               </property>
+               <property name="text">
+                <string>Welcome!</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="status_bar2">
                <property name="styleSheet">
                 <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;
 color: rgba(0, 0, 0, 140);</string>
